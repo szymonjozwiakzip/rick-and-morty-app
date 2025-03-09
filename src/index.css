@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  background-color: #97ce4c;
+  overflow-x: hidden;
+}
+
+.pagination button {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  font-weight: bold;
+  color: white;
+  border: none;
+  margin: 5px 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  transform: scale(1.15);
+}
+
+.pagination button.active {
+  color: green;
+}
+
+.pagination button:disabled {
+  background-color: white;
+  opacity: 0.8;
+  color: black;
+}
+
+.character-card {
+  background-color: #9fded5;
+  border: 5px solid #303032;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.character-card:hover {
+  transform: scale(1.15);
+}
+
+.character-card h2 {
+  margin: 10px 0;
+}
+
+.character-card p {
+  margin: 5px 0;
+}
+
+.gallery {
+  margin: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.app-logo {
+  width: 100%;
+}
+
+.search input {
+  border-radius: 15px;
+  border: 3px solid black;
+  margin: 0 10px;
+  height: 35px;
+  background-color: #9fded5;
+}
+
+.search select {
+  background-color: #9fded5;
+  color: black;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 15px;
+  border: 3px solid black;
+  height: 35px;
+  cursor: pointer;
+}
+
+.reset {
+  background-color: black;
+  color: #97ce4c;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 15px;
+  border: 3px solid black;
+  height: 35px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.app-logo {
+  pointer-events: none;
+  height: 700px;
+  width: auto;
 }
